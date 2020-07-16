@@ -1,0 +1,76 @@
+ data=`[
+    {
+        "header": {
+            "first_name": "Pankaj",
+            "last_name": "Sharma",
+            "profile": "Web developer",
+            "img_url": "./images/pankaj.jpg"
+        },
+        "basic": {
+            "address": "V.P.O.Lag Baliana Tehsil Dehra Distt.Kangra HP 177107",
+            "email": "pnkaj.sharma97@gmail.com",
+            "phone": "8894597426",
+           "github": "Pankajsharma1997",
+            "linkedIn":"pankaj-sharma-0ba58a1b0"
+        },
+        "skills": {
+            "HTML": 5,
+            "CSS": 4,
+            "JavaScript": 3
+        },
+        "languages": {
+            "Hindi":5,
+            "English":4
+            },
+        "hobbies": [
+            "Running ,Aggriculture, Playing Chess"
+        ],
+        "experiences":[
+           {
+            "name":"Resume Template",
+            "from":"1/07/2020",
+            "to":"15/07/2020",
+            "skills":"HTML,CSS,JSON,JavaScript",
+            "discription":"In the Resume Template I can use HTML ,CSS JSON,JavaScript.To modify the content of the Remume template just change the data in the User.Json it will automatically print the data in the HTML page."
+            },
+           {
+            "name":"Bootstrap Template",
+            "skills":"HTML CSS Bootstrap",
+            "from":"15/06/2020",
+            "to":"30/06/2020",
+            "discription":"Bootstrap Template fully responsive web Template.It include the Sign in  and Sign up buttons and cards and Carousel."
+           },
+           {
+            "name":"Introspect responsive Web Template ",
+          "skills":"HTML,CSS",
+          "from":"07/06/2020",
+          "to":"15/06/2020",
+          "discription":"In Introspect web template is a fully responsive web template .The main four section in the template Header ,Navbar,content section and feedback form ,footer .This template include Basic Html Tag and external Css."
+      },
+        {
+            "name":"Ice-Cream web Template",
+            "skills":"Html CSS",
+            "from":"25/05/2020",
+            "to":"06/06/2020",
+            "discription":"In the Ice-Cream Web Template use the Basic Html tags and External CSS."
+           }
+         
+        ],
+        
+        "educations":[
+            {
+                "institute":"GDC Dhaliara",
+                "from":"01/07/2013",
+                "to":"06/08/2016",
+                "education":"BCA"
+            },
+            {
+                "institute":"Gss lag baliana",
+                "from":"01/03/2010",
+                "to":"01/03/2011",
+                "education":"10th"
+                  }
+        ]
+             
+   }
+]`

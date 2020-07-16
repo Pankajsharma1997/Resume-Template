@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Resume</title>
+</head>
+
+<body>
+    <main>
+        <div class="part1" class="timeline"> 
+            <div class="section1" > 
+                <div class="header">
+                <h1 id="name"></h1>
+                <h3 id="profile"></h3>
+         <img id="user_img" src="./images/pankaj.jpg "> 
+            </div>
+            <h2> Personal Details</h2>
+            <div class="ul" id="basics">
+             </div>
+             <h2> Skills </h2>
+             <div id="skills" class="ul">
+             </div>
+            <h2>Languages</h2>
+            <div id="languages"  class="ul">
+            </div>
+            <h2> Hobbies </h2>
+            <div id="hobbies" class="ul">
+            </div>
+          
+        </div>
+         <div class="section2 right"> 
+            <h2> Experiance </h2>
+            <div id="experiences" class="ul"> 
+            </div>
+            <h2> Education</h2>
+            <div id=educations class="ul"> </div>
+           </div>
+
+    
+              </main>
+        <script type="text/javascript" src="user.json"></script>
+        <script>
+            const userData = JSON.parse(data)[0];
+
+            document.getElementById("name").innerHTML = userData.header.first_name + ' ' + userData.header.last_name;
+            document.getElementById("profile").innerHTML = userData.header.profile;
+
+            //   basics
+            const basics = userData.basic;
+            let basicHtml = ''
+            Object.keys(basics).forEach(basic => !!basics[basic] ? basicHtml += `<li> <div class="part2"> <div class="abc">
+           <img class="icon" src=./images/${basic}.png></div> <div class="bcd"> 
+            <span> ${basics[basic]}</span>
+        </div> </div></li>` : null);
+            document.getElementById('basics').innerHTML = basicHtml;
+            
+            //function for indicator image source
+            const indicatorImageSource = function (value) {
+                let indicator = [];
+                for (let i = 1; i <= 5; i++) {
+                    if (i <= value) {
+                        indicator.push("./images/filled-indicator.png")
+                    } else {
+                        indicator.push("./images/empty-indicator.png")
+                    }
+                }
+                console.log(indicator)
+                return indicator;
+            }
+
+            // Skills
+            const skills = userData.skills;
+            let skillsHtml = ""
+            const skillKeys = Object.keys(skills)
+            console.log("keys", skillKeys);
+            skillKeys.forEach(function (skill) {
+                const imgSources = indicatorImageSource(skills[skill])
+                let imagesHtml = ""
+                imgSources.forEach(function (imgSource) {
+                    imagesHtml = imagesHtml + `<img class="indicator" src=${imgSource} >`
+                });
+                console.log("img", imgSources)
+                skillsHtml = skillsHtml + `<li> <div class="part2"> <div class="abc">${ skill}</div>
+                <div class="bcd">${imagesHtml}</div> </div></li>`
+            });
+            document.getElementById('skills').innerHTML = skillsHtml;
+
+            
+
+            // Language
+            const languages = userData.languages;
+            let langHtml = ""
+            const languageKeys = Object.keys(languages)
+            console.log("keys",languageKeys);
+         languageKeys.forEach(function(language){
+                const imgSources=indicatorImageSource(languages[language])
+            let imagesHtml = ""
+                imgSources.forEach(function (imgSource) {
+                  imagesHtml = imagesHtml + `<img class="indicator" src=${imgSource} >`
+                });
+            console.log("img", imgSources)
+               langHtml = langHtml + `<li> <div class="part2"> <div class="abc">${language}</div>
+                <div class="bcd">${imagesHtml}</div> </div></li>`
+            });
+            document.getElementById('languages').innerHTML = langHtml;
+
+
+            // hobbies
+            const hobbies = userData.hobbies;
+            let hobbiesHtml = ""
+            hobbies.forEach(function (hobbie) {
+                hobbiesHtml = hobbiesHtml + `<p> ${hobbie} </p>`
+            });
+            console.log(hobbiesHtml);
+            document.getElementById('hobbies').innerHTML = hobbiesHtml;
+
+            
+            //Experiance
+           const experiences = userData.experiences;
+           let experiencesHtml = ""
+            experiences.forEach(function (experience) {
+            console.log(experience)
+            const expHtml= `<div> <h5 class="text1">${experience.name}</h5>
+                <p class="date">From:${experience.from}
+                To:${experience.to}</p> 
+               <h3 class="content">Skills:${experience.skills}</h3>
+                <p>Discription:${experience.discription}</p>
+            </div>`
+            experiencesHtml = experiencesHtml+ expHtml
+           });
+           document.getElementById('experiences').innerHTML=experiencesHtml;
+
+            // Education
+            const educations=userData.educations;
+            let educationsHtml=""
+             educations.forEach(function(education){
+                 console.log(education)
+                 const eduHtml= `<div> <h5 class="text1"> Institute:${education.institute}</h5>
+                 <p class="date">From:${education.from} 
+                 To:${education.to} </p>
+                <h3 class ="content">  Education:${education.education}</h3>
+                     </div>` 
+                educationsHtml = educationsHtml+ eduHtml
+            });
+            document.getElementById('educations').innerHTML=educationsHtml;
+        </script>
+
+</body>
+
+</html>
