@@ -83,8 +83,8 @@
                 imagesHtml = imagesHtml + `<img class="indicator" src=${imgSource} >`
             });
             console.log("img", imgSources)
-            skillsHtml = skillsHtml + `<li> <div class="part2"> <div class="abc">${skill}</div>
-                <div class="bcd">${imagesHtml}</div> </div></li>`
+            skillsHtml = skillsHtml + `<li class="skill"> <div class="skill text">${skill}</div>
+                <div class="img">${imagesHtml}</div> </li>`
         });
         document.getElementById('skills').innerHTML = skillsHtml;
 
@@ -102,8 +102,8 @@
                 imagesHtml = imagesHtml + `<img class="indicator" src=${imgSource} >`
             });
             console.log("img", imgSources)
-            langHtml = langHtml + `<li> <div class="part2"> <div class="abc">${language}</div>
-                <div class="bcd">${imagesHtml}</div> </div></li>`
+            langHtml = langHtml + `<li class="skill"><div class="skill text">${language}</div>
+                <div class="img">${imagesHtml}</div></li>`
         });
         document.getElementById('languages').innerHTML = langHtml;
 

@@ -11,7 +11,7 @@ html,
 
 .container{
     display: flex;
-    padding: 6rem;
+    padding: 5rem;
 }
 .heading{
     color: var(--text-color);
@@ -75,13 +75,22 @@ ul {
     width: 80%;
     text-align: right;
     padding-left: 1rem;
-    /* font-family: Arial, Helvetica, sans-serif; */
-}
+    }
 
 
 .icon-container {
     width: 20%;
 
+}
+.skill{
+    display:flex;
+    width:100%;
+}
+.skill text{
+    width:30%;
+}
+.img{ width:70%;
+    float:right;
 }
 
 /* Resume right side section */
@@ -95,13 +104,15 @@ ul {
 .content {
     color: var(--text2-color);
     text-align: left;
+    font-weight:500;
+    font-style:italic;
 }
 
 .text1 {
     color: var(--text1-color);
     text-align: left;
     font-size: 1.4rem;
-    padding-top:none;
+    font-weight:400;
 }
 
 .date {
@@ -115,13 +126,13 @@ h1 {
 }
 
 h3 {
-    color: var(--text2-color);
-    text-align: center;
+    color: var(--text1-color);
+    text-align:center;
 }
 p {
-    /* font-family: Arial, Helvetica, sans-serif; */
+    
     font-size: 1rem;
-    line-height: 1rem;
+    line-height: 2rem;
 }
 
   
@@ -138,6 +149,30 @@ p {
   }
 
   #experiences div::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    left: -4.58rem;
+    background-color: black;
+    top: 0;
+    border-radius: 50%;
+    z-index: 1;
+  }
+   
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  #educations{
+    padding-left: 4rem;
+    border-left: 3px solid black;
+  }
+  #educations div{
+      position: relative;
+  }
+
+  #educations div::after {
     content: '';
     position: absolute;
     width: 1rem;
