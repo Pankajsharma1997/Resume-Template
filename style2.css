@@ -1,0 +1,133 @@
+:root {
+  --main-bg-color: #ffffff;
+  --text-color: #000000;
+  --text1-color: #bdd8d0;
+  --text2-color: #000000;
+  --text3-color: #412757;
+}
+
+
+/* Style inputs, select elements and textareas */
+input[type=text],
+select,
+textarea,
+input[type=number] {
+  width: 50%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  color: var(--text-color);
+}
+
+input[type=text1],
+input[type=number1] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  color: var(--text-color);
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 1rem 1rem 1rem 0;
+  display: inline-block;
+}
+
+
+/* Style the container */
+.container {
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 10px;
+  margin: 50px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+  color: var(--text3-color);
+}
+
+/* Floating column for labels: 25% width */
+.col-50 {
+  float: left;
+  width: 13%;
+  margin-top: 6px;
+  color: var(--text3-color);
+}
+
+
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h1 {
+  text-align: center;
+  color: var(--text-color);
+}
+
+.headings {
+  background-color: #3CBC8D;
+}
+
+#content {
+  color: var(--text3-color);
+  font-size: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+.button {
+  background-color: #4CAF50;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-left: 17%;
+}
+
+
+.button:hover {
+  background-color: rgb(231, 177, 224);
+  /* Green */
+  color: white;
+}
+
+/* Responsive layout - when the screen is less than 600px wide,
+ make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+  .col-25,
+  .col-75,
+  input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}

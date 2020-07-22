@@ -31,28 +31,28 @@
             "from":"1/07/2020",
             "to":"15/07/2020",
             "skills":"HTML,CSS,JSON,JavaScript",
-            "discription":"In the Resume Template I can use HTML ,CSS JSON,JavaScript.To modify the content of the Remume template just change the data in the User.Json it will automatically print the data in the HTML page."
+            "description":"In the Resume Template I can use HTML ,CSS JSON,JavaScript.To modify the content of the Resume template just change the data in the User.Json it will automatically print the data in the HTML page."
             },
            {
             "name":"Bootstrap Template",
             "skills":"HTML CSS Bootstrap",
             "from":"15/06/2020",
             "to":"30/06/2020",
-            "discription":"Bootstrap Template fully responsive web Template.It include the Sign in  and Sign up buttons and cards and Carousel."
+            "description":"Bootstrap Template fully responsive web Template.It include the Sign in  and Sign up buttons and cards and Carousel."
            },
            {
             "name":"Introspect responsive Web Template ",
           "skills":"HTML,CSS",
           "from":"07/06/2020",
           "to":"15/06/2020",
-          "discription":"In Introspect web template is a fully responsive web template .The main four section in the template Header ,Navbar,content section and feedback form ,footer .This template include Basic Html Tag and external Css."
+          "description":"In Introspect web template is a fully responsive web template .The main four section in the template Header ,Navbar,content section and feedback form ,footer .This template include Basic Html Tag and external Css."
       },
         {
             "name":"Ice-Cream web Template",
             "skills":"Html CSS",
             "from":"25/05/2020",
             "to":"06/06/2020",
-            "discription":"In the Ice-Cream Web Template use the Basic Html tags and External CSS."
+            "description":"In the Ice-Cream Web Template use the Basic Html tags and External CSS."
            }
          
         ],
