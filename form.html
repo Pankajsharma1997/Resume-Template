@@ -8,12 +8,24 @@
     <title>Resume Form</title>
 </head>
 
+<script type="text/javascript">
+    function onSubmitHandler(event) {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        let data = {}
+        for (let [key, value] of formData.entries()) {
+            data = { ...data, [key]: value }
+        }
+        console.log('data', data)
+    }
+</script>
+
 <body>
     <main class="container">
 
         <h1> Resume Form </h1>
         <div class="container">
-            <form>
+            <form onsubmit="onSubmitHandler(event);">
                 <h2 class="headings"> Basic Details</h2>
                 <div class="row">
                     <div class="col-25" id="content">
@@ -260,7 +272,7 @@
                     </div>
 
 
-                    <button class="button"> Submit</button>
+                    <button class="button" type="Submit"> Submit</button>
                     <button class="button">Cancel</button>
             </form>
 
