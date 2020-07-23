@@ -32,7 +32,7 @@
                     <label for="fname">First Name</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="fname" name="firstname" placeholder="First name..">
+                    <input type="text" id="fname" name="firstname" placeholder="First Name">
                 </div>
             </div>
             <div class="row">
@@ -40,7 +40,7 @@
                     <label for="lname">Last Name</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="lname" name="lastname" placeholder=" last name..">
+                    <input type="text" id="lname" name="lastname" placeholder=" last Name">
                 </div>
             </div>
             <div class="row">
@@ -48,12 +48,8 @@
                     <label for="profile">Profile</label>
                 </div>
                 <div class="col-75">
-                    <select id="profile" name="profile">
-                        <option value="Profile"></option>
-                        <option value="Web Designer">Web Designer</option>
-                        <option value="Web Developer">Web Developer</option>
-
-                    </select>
+                    <input type="text" id="profile" name="profile" placeholder="Profile">
+                    
                 </div>
             </div>
             <div class="row">
@@ -61,7 +57,7 @@
                     <label for="Address">Address</label>
                 </div>
                 <div class="col-75">
-                    <textarea id="Address" name="Address" placeholder="Write something.."
+                    <textarea id="Address" name="Address" placeholder="Address"
                         style="height:80px"></textarea>
                 </div>
             </div>
@@ -88,7 +84,7 @@
                     <label for="github">Github</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="github" name="github" placeholder="Github Account..">
+                    <input type="text" id="github" name="github" placeholder="Github Account">
                 </div>
             </div>
 
@@ -97,25 +93,42 @@
                     <label for="linkdin">Linkdin</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="Linkdin" name="Linkdin" placeholder="Linkdin Account..">
+                    <input type="text" id="Linkdin" name="Linkdin" placeholder="Linkdin Account">
                 </div>
             </div>
 
             <h2 class="headings"> Skills</h2>
-
+            <div class="row">
+                <div class="col-25" id="content">
+                    <label for="languages">Skills</label>
+                </div>
+                <div class="col-75">
+                <div class="input-box">
+                        <ul>
+                          <li>HTML</li>
+                          <li>CSS</li>
+                          <li>Javascript</li>
+                        </ul>
+                        <input type="text" placeholder="Add Skills" />
+                    </div>
+                    </div>
+            </div>
+       
             <h2 class="headings"> Languges</h2>
             <div class="row">
                 <div class="col-25" id="content">
                     <label for="language">Languages</label>
                 </div>
                 <div class="col-75">
-                    <select id="language" name="language">
-                        <option value="Laguage">None</option>
-                        <option value="English">English</option>
-                        <option value="Hindi">Hindi</option>
-                        <option value="English,Hindi">English,Hindi</option>
-                    </select>
-
+                    <div class="input-box">
+                        <ul>
+                          <li>English</li>
+                          <li>Hindi</li>
+                        </ul>
+                        <input type="text" placeholder="Add Language" />
+                    </div>
+                    </div>
+                    <hr>
                 </div>
 
                 <h2 class="headings"> Hobbies</h2>
@@ -124,7 +137,7 @@
                         <label for="Hobbies">Hobbies</label>
                     </div>
                     <div class="col-75">
-                        <textarea id="Hobbies" name="Hobbies" placeholder="Write something.."
+                        <textarea id="Hobbies" name="Hobbies" placeholder="Hobbies"
                             style="height:80px"></textarea>
                     </div>
                 </div>
@@ -272,8 +285,8 @@
                 </div>
 
                 <div class="btn-container">
-                    <button class="button btn-submit" type="Submit"> Submit</button>
-                    <button class="button btn-cancel">Cancel</button>
+                    <button class="button btn-submit" type="Cancel">Cancel</button>
+                    <button class="button1 btn-cancel">Submit</button>
                 </div>
 
         </form>
