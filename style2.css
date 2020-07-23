@@ -4,8 +4,26 @@
   --text1-color: #bdd8d0;
   --text2-color: #000000;
   --text3-color: #412757;
+  background-color: #dcdcdc8c;
+
 }
 
+
+.container {
+  margin: 5rem;
+  padding: 2rem 5rem;
+  background-color: var(--main-bg-color);
+  }
+
+  .headings {
+    border-bottom: 1px solid #8080806b;
+    padding-bottom: 0.5rem;
+  }
+  
+  .btn-container{
+    margin: auto;
+    text-align: center;
+  }
 
 /* Style inputs, select elements and textareas */
 input[type=text],
@@ -38,14 +56,6 @@ label {
   display: inline-block;
 }
 
-
-/* Style the container */
-.container {
-  border-radius: 5px;
-  background-color: #ffffff;
-  padding: 10px;
-  margin: 50px;
-}
 
 /* Floating column for labels: 25% width */
 .col-25 {
@@ -84,9 +94,7 @@ h1 {
   color: var(--text-color);
 }
 
-.headings {
-  background-color: #3CBC8D;
-}
+
 
 #content {
   color: var(--text3-color);
@@ -100,6 +108,7 @@ td {
 }
 
 .button {
+  width: 40%;
   background-color: #4CAF50;
   /* Green */
   border: none;
@@ -110,7 +119,7 @@ td {
   display: inline-block;
   font-size: 16px;
   margin-top: 20px;
-  margin-left: 17%;
+
 }
 
 
