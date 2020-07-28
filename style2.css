@@ -9,119 +9,94 @@
 }
 
 
-.container {
-  margin: 5rem;
-  padding: 2rem 5rem;
-  background-color: var(--main-bg-color);
-  }
 
-  .headings {
-    border-bottom: 1px solid #8080806b;
-    padding-bottom: 0.5rem;
-  }
-  
-  .btn-container{
-    margin: auto;
-    text-align: center;
-  }
 
-/* Style inputs, select elements and textareas */
-input[type=text],
-textarea,
-input[type=number] {
-  width: 50%;
-  padding: 1rem;
-  outline:none;
-  border: 1px ridge  rgba(228, 222, 222, 0.767); 
-  border-radius: 3px; 
-  box-sizing: border-box; 
-  resize: vertical;
-  color: var(--text-color);
-  background-color: lightgray;
+/* Text formating classes */
+.headings {
+  border-bottom: 1px solid #8080806b;
+  border-top: 1px solid #8080806b;
+  border-width: 100%;
+  padding: 0.8rem 0 0.8rem 0;
+  margin-left: 3rem;
+  grid-column: span 2;
+
 }
 
-input[type=text1],
-input[type=number1] {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px ridge rgba(228, 222, 222, 0.473);
-  border-radius: 2px;
-  box-sizing: border-box;
-  resize: vertical;
-  color: var(--text-color);
-}
-
-/* Style the label to display next to the inputs */
-label {
-  padding: 1rem 1rem 1rem 0;
-  display: inline-block;
-}
-
-
-/* Floating column for labels: 25% width */
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-  color: var(--text3-color);
-}
-
-/* Floating column for labels: 25% width */
-.col-50 {
-  float: left;
-  width: 13%;
-  margin-top: 6px;
-  color: var(--text3-color);
-}
-
-
-
-/* Floating column for inputs: 75% width */
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-h1 {
+.title {
   text-align: center;
   color: var(--text-color);
+  margin: 1rem;
+  grid-column: span 2;
+
 }
-
-
 
 #content {
   color: var(--text3-color);
   font-size: 20px;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 20rem auto;
+  background-color: var(--main-bg-color);
+  margin: 4rem;
+  padding: 2rem 5rem;
+
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 1rem 1rem 6rem;
+  font-size: 30px;
+  text-align: center;
+
+}
 
 
-.button {
+/* Style inputs, select elements and textareas */
+input[type=text],
+textarea,
+input[type=number] {
+  width: 70%;
+  padding: 0.7rem;
+  outline: none;
+  border: 1px ridge rgba(228, 222, 222, 0.767);
+  border-radius: 3px;
+  box-sizing: border-box;
+  resize: vertical;
+  color: var(--text-color);
+  background-color: lightgray;
+}
+
+
+/* style the button  alignment*/
+#btn-container {
+ text-align: center;
+  grid-column: span 2;
+  border-top: 1px solid #8080806b;
+}
+
+/* style  the Cancel Button */
+.cancel-button {
   width: 10%;
   background-color: #e7e7e7;
- border: none;
+  border: none;
   color: black;
-  padding: 15px 32px;
+  padding: 1rem 1rem 1rem 1rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 20px 40px 20px 0 ;
+  margin: 20px 40px 20px 0;
 }
-.button1 {
+
+/* style  the Submit Button */
+.submit-button {
   width: 10%;
   background-color: #555555;
-   border: none;
+  border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 1rem 1rem 1rem 1rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -130,42 +105,51 @@ h1 {
 
 }
 
-.button:hover {
-  background-color:lightslategray;
+/* style  the Cancel button Hover */
+.cancel-button:hover {
+  background-color: lightslategray;
   color: red;
 }
-.button1:hover {
-  background-color:lightskyblue;
+
+/* style  the Submit button Hover */
+.submit-button:hover {
+  background-color: lightskyblue;
   color: blue;
 }
-*{
+
+* {
   margin: 0px;
   padding: 0px;
 }
 
-.input-box{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+
+
+.input-box {
+  display:inline block;
+  /* flex-direction: row; */
+  /* justify-content: flex-start; */
   border: 1px solid black;
 }
 
-.input-box ul{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+.input-box ul {
+  display:flex; 
+   flex-direction: row; 
+  justify-content: flex-start; 
   list-style-type: none;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
-.input-box li{
-  border: 1px solid black;
-  border-radius: 1px;
+.input-box li {
+  border: 1px solid black; 
+  border-radius: 1px; 
   padding: 10px;
   margin: 2px;
-  width:100px;
+  /* width: 100px; */
+  color: var(--text3-color);
+  font-size: 20px;
 }
-.input-box input{
+
+.input-box input {
   flex: 1 1 auto;
   align-self: flex-start;
 }

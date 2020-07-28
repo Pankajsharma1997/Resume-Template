@@ -14,281 +14,201 @@
         const formData = new FormData(event.target);
         let data = {}
         for (let [key, value] of formData.entries()) {
-            data = { ...data, [key]: value }
+            data = {
+                ...data,
+                [key]: value
+            }
         }
         console.log('data', data)
     }
 </script>
 
 <body>
-    <main class="container">
-
-        <h1> Resume Form </h1>
-
+    <main>
         <form onsubmit="onSubmitHandler(event);">
-            <h2 class="headings"> Basic Details</h2>
-            <div class="row">
-                <div class="col-25" id="content">
-                    <label for="fname">First Name</label>
+            <div class="grid-container">
+                <!-- Title -->
+                <h1 class="title"> Resume Form </h1>
+                <h2 class="headings"> Basic Details</h2>
+                <div class="grid-item" id="content">
+                    <!-- First Name -->
+                    <label for="fname">First Name </label></div>
+                <div class="grid-item"><input type="text" id="fname" name="firstname" placeholder="First Name">
                 </div>
-                <div class="col-75">
-                    <input type="text" id="fname" name="firstname" placeholder="First Name">
+                <!--Last Name  -->
+                <div class="grid-item" id="content">
+                    <label for="fname">Last Name</label> </div>
+                <div class="grid-item"><input type="text" id="lname" name="Lastname" placeholder="Last Name">
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-25" id="content">
-                    <label for="lname">Last Name</label>
+                <!--Profile -->
+                <div class="grid-item" id="content">
+                    <label for="profile">Profile</label></div>
+                <div class="grid-item"><input type="text" id="profile" name="profile" placeholder="Profile">
                 </div>
-                <div class="col-75">
-                    <input type="text" id="lname" name="lastname" placeholder=" last Name">
+                <!-- Address -->
+                <div class="grid-item" id="content">
+                    <label for="Address">Address</label> </div>
+                <div class="grid-item">
+                    <textarea id="Address" name="Address" placeholder="Address" style="height:80px"></textarea>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-25" id="content">
-                    <label for="profile">Profile</label>
-                </div>
-                <div class="col-75">
-                    <input type="text" id="profile" name="profile" placeholder="Profile">
-                    
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25" id="content">
-                    <label for="Address">Address</label>
-                </div>
-                <div class="col-75">
-                    <textarea id="Address" name="Address" placeholder="Address"
-                        style="height:80px"></textarea>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25" id="content">
-                    <label for="Email">E-mail</label>
-                </div>
-                <div class="col-75">
+
+                <!-- Email -->
+                <div class="grid-item" id="content">
+                    <label for="Email">E-mail</label> </div>
+                <div class="grid-item">
                     <input type="text" id="Email" name="Email" placeholder="E-mail">
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-25" id="content">
+                <!--Mobile Number  -->
+                <div class="grid-item" id="content">
                     <label for="mobile number">Mobile Number</label>
                 </div>
-                <div class="col-75">
+                <div class="grid-item">
                     <input type="Number" id="mobile number" name="mobile number" placeholder="Mobile No.">
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-25" id="content">
+                <!--Github Account  -->
+                <div class="grid-item" id="content">
                     <label for="github">Github</label>
                 </div>
-                <div class="col-75">
+                <div class="grid-item">
                     <input type="text" id="github" name="github" placeholder="Github Account">
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="col-25" id="content">
+                <!-- Linkdin Account -->
+                <div class="grid-item" id="content">
                     <label for="linkdin">Linkdin</label>
                 </div>
-                <div class="col-75">
+                <div class="grid-item">
                     <input type="text" id="Linkdin" name="Linkdin" placeholder="Linkdin Account">
                 </div>
-            </div>
 
-            <h2 class="headings"> Skills</h2>
-            <div class="row">
-                <div class="col-25" id="content">
-                    <label for="languages">Skills</label>
+                <!-- Skills -->
+
+                <h2 class="headings">Skills</h2>
+                <div class="grid-item" id="content">
+                    <label for="Skills">Skills</label>
                 </div>
-                <div class="col-75">
-                <div class="input-box">
-                        <ul>
-                          <li>HTML</li>
-                          <li>CSS</li>
-                          <li>Javascript</li>
-                        </ul>
-                        <input type="text" placeholder="Add Skills" />
-                    </div>
-                    </div>
-            </div>
-       
-            <h2 class="headings"> Languges</h2>
-            <div class="row">
-                <div class="col-25" id="content">
-                    <label for="language">Languages</label>
-                </div>
-                <div class="col-75">
+                <div class="grid-item">
                     <div class="input-box">
                         <ul>
-                          <li>English</li>
-                          <li>Hindi</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Javascript</li>
+                            <input type="text" />
                         </ul>
-                        <input type="text" placeholder="Add Language" />
+                      
                     </div>
-                    </div>
-                    <hr>
                 </div>
 
+
+                <!-- Languages -->
+                <h2 class="headings">language</h2>
+                <div class="grid-item" id="content">
+                    <label for="Languages">Languages</label>
+                </div>
+                <div class="grid-item">
+                    <div class="input-box">
+                        <ul>
+                            <li>English</li>
+                            <li>Hindi</li>
+                       <input type="text"/>
+                    </ul>
+                    </div>
+                </div>
+
+                <!-- Hobbies -->
                 <h2 class="headings"> Hobbies</h2>
-                <div class="row">
-                    <div class="col-25" id="content">
-                        <label for="Hobbies">Hobbies</label>
-                    </div>
-                    <div class="col-75">
-                        <textarea id="Hobbies" name="Hobbies" placeholder="Hobbies"
-                            style="height:80px"></textarea>
-                    </div>
+                <div class="grid-item" id="content">
+                    <label for="Hobbies">Hobbies</label></div>
+                <div class="grid-item">
+                    <input type="text" id="Hobbies" name="Hobbies" placeholder="Hobbies">
                 </div>
 
 
-
-                <h2 class="headings"> Experiance</h2>
-                <div class="rows">
-                    <div class="col-25">
-                        <label for="Title">Project Title</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="Title" name="Title" placeholder="Title">
-                        <label for="From">From</label>
-                        <input type="date" id="myDate" value="2020/07/01">
-                        <label for="To">To</label>
-                        <input type="date" id="myDate" value="2014-02-09">
-                    </div>
+                <!-- Experience -->
+                <h2 class="headings"> Experience</h2>
+                <!-- Title -->
+                <div class="grid-item" id="content">
+                    <label for="Title">Title </label> </div>
+                <div class="grid-item">
+                    <input type="text" id="Title" name="Title" placeholder="Title">
                 </div>
-
-                <div class="row">
-                    <div class="col-25">
-                        <label for="Description">Description</label>
-                    </div>
-                    <div class="col-75">
-                        <textarea id="Description" name="Description" placeholder="Write something.."
-                            style="height:80px"></textarea>
-                    </div>
+                <!-- Skills -->
+                <div class="grid-item" id="content">
+                    <label for="Skills">Skills </label> </div>
+                <div class="grid-item">
+                    <input type="text" id="Skills" name="Skills" placeholder="Skills">
                 </div>
-
-                <div class="rows">
-                    <div class="col-25">
-                        <label for="Title">Project Title</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="Title" name="Title" placeholder="Title">
-                        <label for="From">From</label>
-                        <input type="date" id="myDate" value="2020/07/01">
-                        <label for="To">To</label>
-                        <input type="date" id="myDate" value="2014-02-09">
-                    </div>
+                <!-- Discription -->
+                <div class="grid-item" id="content">
+                    <label for="Discription">Discription </label>
                 </div>
-
-                <div class="row">
-                    <div class="col-25">
-                        <label for="Description">Description</label>
-                    </div>
-                    <div class="col-75">
-                        <textarea id="Description" name="Description" placeholder="Write something.."
-                            style="height:80px"></textarea>
-                    </div>
+                <div class="grid-item">
+                    <textarea name="Discription" placeholder="Discription" style="height:80px"></textarea>
                 </div>
-
-                <div class="rows">
-                    <div class="col-25">
-                        <label for="Title">Project Title </label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="Title" name="Title" placeholder="Title">
-                        <label for="From">From</label>
-                        <input type="date" id="myDate" value="2020/07/01">
-                        <label for="To">To</label>
-                        <input type="date" id="myDate" value="2014-02-09">
-                    </div>
+                <!-- Start & End Date  -->
+                <div class="grid-item" id="content">
+                    <label for="Start">Start </label>
                 </div>
-
-                <div class="row">
-                    <div class="col-25">
-                        <label for="Description">Description</label>
-                    </div>
-                    <div class="col-75">
-                        <textarea id="Description" name="Description" placeholder="Write something.."
-                            style="height:80px"></textarea>
-                    </div>
+                <div class="grid-item">
+                    <input type="date" id="myDate" value="2020-07-01">
                 </div>
-
-                <div class="rows">
-                    <div class="col-25">
-                        <label for="Title">Project Title</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" id="Title" name="Title" placeholder="Title">
-                        <label for="From">From</label>
-                        <input type="date" id="myDate" value="2020/07/01">
-                        <label for="To">To</label>
-                        <input type="date" id="myDate" value="2014-02-09">
-                    </div>
+                <div class="grid-item" id="content">
+                    <label for="End">End</label>
                 </div>
-
-
-                <div class="row">
-                    <div class="col-25">
-                        <label for="Description">Description</label>
-                    </div>
-                    <div class="col-75">
-                        <textarea id="Description" name="Description" placeholder="Write something.."
-                            style="height:100px"></textarea>
-                    </div>
+                <div class="grid-item">
+                    <input type="date" id="myDate" value="2020-07-15">
                 </div>
+                <!--Education  -->
                 <h2 class="headings">Education</h2>
-                <div class="rows">
-                    <div class="col-50">
-                        <label for="qualification">Qualification</label><br>
-                        <input type="text1" placeholder=""><br>
-                        <input type="text1" placeholder=""><br>
-                        <input type="text1" placeholder=""><br>
-                    </div>
-                    <div class="col-50">
-                        <label for="qualification">Stream</label><br>
-                        <input type="text1" placeholder=""><br>
-                        <input type="text1" placeholder=""><br>
-                        <input type="text1" placeholder=""><br>
-                    </div>
-                    <div class="col-50">
-                        <label for="qualification">University/Board</label><br>
-                        <input type="text1" placeholder=""><br>
-                        <input type="text1" placeholder=""><br>
-                        <input type="text1" placeholder=""><br>
-                    </div>
-                    <div class="col-50">
-                        <label for="Year of Passing">Year Of Passing</label><br>
-                        <input type="Number1" id="year of passing" name="Year of passing" placeholder=""> <br>
-                        <input type="Number1" id="year of passing" name="Year of passing" placeholder=""> <br>
-                        <input type="Number1" id="year of passing" name="Year of passing" placeholder=""> <br>
-                    </div>
-                    <div class="col-50">
-                        <label for="Total Marks">Total Marks</label><br>
-                        <input type="Number1" id="Total marks" name="Total marks" placeholder=""> <br>
-                        <input type="Number1" id="Total marks" name="Total marks" placeholder=""> <br>
-                        <input type="Number1" id="Total marks" name="Total marks" placeholder=""> <br>
-                    </div>
-                    <div class="col-50">
-                        <label for="obtain marks">Obtain Marks</label><br>
-                        <input type="Number1" id="obtain marks" name="obtain marks" placeholder=""> <br>
-                        <input type="Number1" id="obtain marks" name="obtain marks" placeholder=""> <br>
-                        <input type="Number1" id="obtain marks" name="obtain marks" placeholder=""> <br>
-
-                    </div>
-                    <div class="col-50">
-                        <label for="percentage">Percentage</label><br>
-                        <input type="Number1" id="percentage" name="percentage" placeholder=""> <br>
-                        <input type="Number1" id="percentage" name="percentage" placeholder=""><br>
-                        <input type="Number1" id="percentage" name="percentage" placeholder=""><br>
-                    </div>
+                <!-- Qualification -->
+                <div class="grid-item" id="content">
+                    <label for="Qualification">Qualification</label> </div>
+                <div class="grid-item">
+                    <input type="text" id="Qualification" name="Qualification" placeholder="Qualification">
+                </div>
+                <!-- Course -->
+                <div class="grid-item" id="content">
+                    <label for="Course">Course</label> </div>
+                <div class="grid-item">
+                    <input type="text" id="Course" name="Course" placeholder="Course">
                 </div>
 
-                <div class="btn-container">
-                    <button class="button btn-submit" type="Cancel">Cancel</button>
-                    <button class="button1 btn-cancel">Submit</button>
+                <!--University -->
+                <div class="grid-item" id="content">
+                    <label for="University">University/Board</label> </div>
+                <div class="grid-item">
+                    <input type="text" id="University" name="University" placeholder="University/Board">
                 </div>
 
+                <!-- Discription -->
+                <div class="grid-item" id="content">
+                    <label for="Discription">Discription </label>
+                </div>
+                <div class="grid-item">
+                    <textarea name="Discription" placeholder="Discription" style="height:80px"></textarea>
+                </div>
+                <!-- Start & End Date  -->
+                <div class="grid-item" id="content">
+                    <label for="Start">Start Year </label>
+                </div>
+                <div class="grid-item">
+                    <input type="date" id="myDate" value="2000-01-01">
+                </div>
+                <div class="grid-item" id="content">
+                    <label for="End">End Year</label>
+                </div>
+                <div class="grid-item">
+                    <input type="date" id="myDate" value="2000-01-01">
+                </div>
+
+                <!--Submit & Cancel Button   -->
+                <div class="grid-item" id="btn-container">
+                    <button class="cancel-button" type="Cancel">Cancel</button>
+                    <button class="submit-button">Submit</button>
+                </div>
+
+            </div>
         </form>
     </main>
 </body>
