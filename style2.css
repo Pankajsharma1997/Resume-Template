@@ -13,12 +13,12 @@
 
 /* Text formating classes */
 .headings {
-  border-bottom: 1px solid #8080806b;
-  border-top: 1px solid #8080806b;
-  border-width: 100%;
-  padding: 0.8rem 0 0.8rem 0;
+  padding: 3rem 0 3rem 0;
   margin-left: 3rem;
   grid-column: span 2;
+  border-bottom: 1px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;;
 
 }
 
@@ -32,7 +32,13 @@
 
 #content {
   color: var(--text3-color);
-  font-size: 20px;
+  font-size: 1.5rem;
+  margin-top:1rem;
+}
+.content {
+  color: var(--text3-color);
+  font-size: 1rem;
+  
 }
 
 .grid-container {
@@ -41,45 +47,51 @@
   background-color: var(--main-bg-color);
   margin: 4rem;
   padding: 2rem 5rem;
-
 }
 
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 0.5rem 1rem 1rem 6rem;
-  font-size: 30px;
-  text-align: center;
-
+  padding: 1rem 1rem 1rem 6rem;
+   font-size:15px; 
+  text-align:left;
 }
 
 
 /* Style inputs, select elements and textareas */
 input[type=text],
-textarea,
-input[type=number] {
+textarea, input[type=number],input[type=date] {
   width: 70%;
   padding: 0.7rem;
-  outline: none;
-  border: 1px ridge rgba(228, 222, 222, 0.767);
-  border-radius: 3px;
   box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+ box-sizing: border-box;
   resize: vertical;
   color: var(--text-color);
-  background-color: lightgray;
 }
-
-
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+input[type=number]:focus{
+  border: 3px solid #555;
+}
+textarea:focus{
+border: 3px solid #555;
+}
 /* style the button  alignment*/
 #btn-container {
  text-align: center;
   grid-column: span 2;
   border-top: 1px solid #8080806b;
+  margin-right:10rem;
 }
 
 /* style  the Cancel Button */
 .cancel-button {
-  width: 10%;
-  background-color: #e7e7e7;
+  width: 20%;
+  background-color:lightgray;
   border: none;
   color: black;
   padding: 1rem 1rem 1rem 1rem;
@@ -87,15 +99,15 @@ input[type=number] {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 20px 40px 20px 0;
+  margin: 20px 40px 16px 0;
 }
 
 /* style  the Submit Button */
 .submit-button {
-  width: 10%;
-  background-color: #555555;
+  width: 20%;
+  background-color:lightgray;
   border: none;
-  color: white;
+  color: black;
   padding: 1rem 1rem 1rem 1rem;
   text-align: center;
   text-decoration: none;
@@ -107,14 +119,14 @@ input[type=number] {
 
 /* style  the Cancel button Hover */
 .cancel-button:hover {
-  background-color: lightslategray;
-  color: red;
+  background-color: darkgray;
+
 }
 
 /* style  the Submit button Hover */
 .submit-button:hover {
-  background-color: lightskyblue;
-  color: blue;
+  background-color:darkgray;
+  
 }
 
 * {
@@ -126,9 +138,7 @@ input[type=number] {
 
 .input-box {
   display:inline block;
-  /* flex-direction: row; */
-  /* justify-content: flex-start; */
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .input-box ul {
@@ -136,17 +146,15 @@ input[type=number] {
    flex-direction: row; 
   justify-content: flex-start; 
   list-style-type: none;
-  /* flex-wrap: wrap; */
 }
 
 .input-box li {
-  border: 1px solid black; 
-  border-radius: 1px; 
+  border: 1px solid#ccc;  
+  border-radius: 1px;  
   padding: 10px;
   margin: 2px;
-  /* width: 100px; */
   color: var(--text3-color);
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 .input-box input {
